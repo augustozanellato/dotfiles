@@ -1,0 +1,118 @@
+
+export HISTSIZE=10000
+export SAVEHIST=100000
+export HISTFILE=${HOME}/.zhistory
+
+setopt EXTENDED_HISTORY
+setopt INC_APPEND_HISTORY
+setopt HIST_FIND_NO_DUPS
+
+
+# Load aliases
+[ -f ${HOME}/.dotAliases ] && source ${HOME}/.dotAliases
+
+source $HOME/.zi/bin/zi.zsh
+
+# THEME
+zi ice wait'!' lucid atload'source ${HOME}/.p10k.zsh; _p9k_precmd' nocd
+zi light romkatv/powerlevel10k
+
+
+# OMZ LIB
+zi ice wait lucid
+zi snippet OMZ::lib/compfix.zsh
+
+zi ice wait lucid
+zi snippet OMZ::lib/completion.zsh
+
+zi ice wait lucid
+zi snippet OMZ::lib/correction.zsh
+
+zi ice wait lucid
+zi snippet OMZ::lib/diagnostics.zsh
+
+zi ice wait lucid
+zi snippet OMZ::lib/directories.zsh
+
+zi ice wait lucid
+zi snippet OMZ::lib/functions.zsh
+
+zi ice wait lucid
+zi snippet OMZ::lib/git.zsh
+
+zi ice wait lucid
+zi snippet OMZ::lib/grep.zsh
+
+zi snippet OMZ::lib/key-bindings.zsh
+
+zi ice wait lucid
+zi snippet OMZ::lib/misc.zsh
+
+zi ice wait lucid
+zi snippet OMZ::lib/prompt_info_functions.zsh
+
+zi ice wait lucid
+zi snippet OMZ::lib/spectrum.zsh
+
+zi ice wait lucid
+zi snippet OMZ::lib/termsupport.zsh
+
+zi ice wait lucid
+zi snippet OMZ::lib/theme-and-appearance.zsh
+
+
+# OMZ PLUGINS
+zi ice wait lucid
+zi snippet OMZ::plugins/sudo/sudo.plugin.zsh
+
+zi ice wait lucid
+zi snippet OMZ::plugins/git/git.plugin.zsh
+
+zi ice wait lucid
+zi snippet OMZ::plugins/colored-man-pages/colored-man-pages.plugin.zsh
+
+
+# OTHER PLUGINS
+zi ice wait lucid
+zi light MichaelAquilina/zsh-you-should-use
+
+zi ice wait lucid
+zi light hlissner/zsh-autopair
+
+zi ice wait lucid atload'_zsh_autosuggest_start' nocd
+zi light zsh-users/zsh-autosuggestions
+
+zi ice wait lucid
+zi light zdharma-continuum/history-search-multi-word
+
+zi ice wait lucid
+zi light zsh-users/zsh-completions
+
+zi ice wait lucid atinit'zpcompinit; zpcdreplay' nocd
+zi light zdharma-continuum/fast-syntax-highlighting
+
+
+
+# fzf
+source /usr/share/fzf/completion.zsh
+source ${HOME}/.fzf-binds.zsh
+bindkey '^ ' autosuggest-accept
+
+
+
+# fasd
+eval "$(fasd --init auto)"
+
+
+
+# OTHER SETTINGS
+export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#676767,underline"
+
+zstyle :plugin:history-search-multi-word reset-prompt-protect 1
+source $HOME/.HSMW-theme.zsh
+
+export FZFZ_RECENT_DIRS_TOOL="fasd"
+export FZFZ_SUBDIR_LIMIT=0
+
+export EDITOR=nvim
+export PATH=$PATH:$HOME/.local/bin

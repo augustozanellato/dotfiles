@@ -1,0 +1,29 @@
+typeset -gA HSMW_HIGHLIGHT_STYLES
+: ${HSMW_HIGHLIGHT_STYLES[default]:=none}
+: ${HSMW_HIGHLIGHT_STYLES[unknown-token]:=fg=124,bold}
+: ${HSMW_HIGHLIGHT_STYLES[reserved-word]:=fg=146}
+: ${HSMW_HIGHLIGHT_STYLES[alias]:=fg=208}
+: ${HSMW_HIGHLIGHT_STYLES[suffix-alias]:=fg=208}
+: ${HSMW_HIGHLIGHT_STYLES[builtin]:=fg=208}
+: ${HSMW_HIGHLIGHT_STYLES[function]:=fg=208}
+: ${HSMW_HIGHLIGHT_STYLES[command]:=fg=208}
+: ${HSMW_HIGHLIGHT_STYLES[precommand]:=fg=208}
+: ${HSMW_HIGHLIGHT_STYLES[commandseparator]:=none}
+: ${HSMW_HIGHLIGHT_STYLES[hashed-command]:=fg=208}
+: ${HSMW_HIGHLIGHT_STYLES[path]:=fg=85}
+: ${HSMW_HIGHLIGHT_STYLES[path_pathseparator]:=}
+: ${HSMW_HIGHLIGHT_STYLES[globbing]:=fg=220}
+: ${HSMW_HIGHLIGHT_STYLES[history-expansion]:=fg=blue,bold}
+: ${HSMW_HIGHLIGHT_STYLES[single-hyphen-option]:=fg=185}
+: ${HSMW_HIGHLIGHT_STYLES[double-hyphen-option]:=fg=185}
+: ${HSMW_HIGHLIGHT_STYLES[back-quoted-argument]:=none}
+: ${HSMW_HIGHLIGHT_STYLES[single-quoted-argument]:=fg=147}
+: ${HSMW_HIGHLIGHT_STYLES[double-quoted-argument]:=fg=147}
+: ${HSMW_HIGHLIGHT_STYLES[dollar-quoted-argument]:=fg=147}
+: ${HSMW_HIGHLIGHT_STYLES[back-or-dollar-double-quoted-argument]:=fg=185}
+: ${HSMW_HIGHLIGHT_STYLES[back-dollar-quoted-argument]:=fg=185}
+: ${HSMW_HIGHLIGHT_STYLES[assign]:=none}
+: ${HSMW_HIGHLIGHT_STYLES[redirection]:=none}
+: ${HSMW_HIGHLIGHT_STYLES[comment]:=fg=187,bold}
+: ${HSMW_HIGHLIGHT_STYLES[newline]:=none}  # '\n' strings
+: ${HSMW_HIGHLIGHT_STYLES[variable]:=none}
