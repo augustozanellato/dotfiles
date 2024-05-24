@@ -115,4 +115,5 @@ export FZFZ_RECENT_DIRS_TOOL="fasd"
 export FZFZ_SUBDIR_LIMIT=0
 
 export EDITOR=nvim
-export PATH=$PATH:$HOME/.local/bin
+export PATH=$PATH:$HOME/.local/bin:$HOME/go/bin:$HOME/flutter/bin:$HOME/.pub-cache/bin
+

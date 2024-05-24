@@ -1,3 +1,8 @@
 #!/usr/bin/zsh
 alias gf="git flow"
 alias cb=cocktail-bar-cli
+alias pm3="~/proxmark3/pm3"
+alias tmp='cd $(mktemp -d)'
+alias py='python -c'
+alias wrangler='npx wrangler'
+alias curtime='timedatectl show -p TimeUSec --value'
